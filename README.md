@@ -27,7 +27,7 @@ Add it's most simple you can just call:
 
     awty.add();
 
-And when you need to update the progress, simply call.
+And when you need to update the progress, simply call update passing the percentage complete.
 
     awty.update(10);
 

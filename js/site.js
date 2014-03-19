@@ -14,8 +14,8 @@ window.onload = function() {
             var dataset = target.dataset;
             // If this is IE < 11, we need to get the data attributes explicitly as it does not
             // support the dataset property.
-            var increment = dataset ? dataset['progress'] : target.getAttribute('data-progress');
-            awty.update(increment);
+            var percentageComplete = dataset ? dataset['progress'] : target.getAttribute('data-progress');
+            awty.update(percentageComplete);
         });
     } else {
         buttons.addEventListener('click', function(event) {
@@ -23,8 +23,8 @@ window.onload = function() {
             var dataset = target.dataset;
             // If this is IE < 11, we need to get the data attributes explicitly as it does not
             // support the dataset property.
-            var increment = dataset ? dataset['progress'] : target.getAttribute('data-progress');
-            awty.update(increment);
+            var percentageComplete = dataset ? dataset['progress'] : target.getAttribute('data-progress');
+            awty.update(percentageComplete);
         });
     }
 };

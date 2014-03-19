@@ -24,10 +24,10 @@
             }
         },
         /**
-         * Increases the progress meter to the specified increment.
-         * @param {int} increment - An increment between 0 - 100
+         * Increases the progress meter to the specified percentageComplete.
+         * @param {int} percentageComplete - An percentageComplete between 0 - 100
          */
-        update: function(increment) {
+        update: function(percentageComplete) {
 
             // When the meter has reached 100%, it's height property is
             // set to 0, if this then is the case, just clear out the
@@ -37,10 +37,10 @@
                 this.progress.style.height = '';
             }
 
-            if (increment < 100) {
-                this.progress.style.width = increment + '%';
+            if (percentageComplete < 100) {
+                this.progress.style.width = percentageComplete + '%';
             } else {
-                this.progress.style.width = increment + '%';
+                this.progress.style.width = percentageComplete + '%';
                 window.setTimeout(function() {
                     awty.progress.style.width = 0;
                     awty.progress.style.height = 0;
