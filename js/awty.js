@@ -1,3 +1,10 @@
+/*
+awty.js
+version: 1.0
+author: Schalk Neethling
+license: MIT [github.com/ossreleasefeed/arewethereyet/blob/master/LICENSE]
+URL: github.com/ossreleasefeed/arewethereyet
+*/
 (function() {
 
     var awty = {
