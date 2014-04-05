@@ -48,23 +48,17 @@ From here on, you just call the update function as demonstrated before.
 
 ## Options ##
 
-The options parameter is an object that allows you to customize the progress meter.
+The options parameter is an object that allows you to customise the progress meter.
 The properties are as follows:
 
     {
         selector: '.meter',
-        position: 'beforebegin',
         bgcolor: '#fefefe'
     }
 
 ### selector [optional, default='body'] ###
 
 Here you can specify any valid CSS 2.1 selector.
-
-### position [optional, default='afterbegin'] ###
-
-For a full list and explanation of the values, see the position property
-of http://mdn.io/insertAdjacentHTML
 
 ### bgcolor [optional, default='#000'] ###
 

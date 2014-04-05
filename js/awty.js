@@ -22,10 +22,6 @@ URL: github.com/ossreleasefeed/arewethereyet
                 this.selector = options.selector;
             }
 
-            if (options.position) {
-                this.position = options.position;
-            }
-
             if (options.bgcolor) {
                 this.progress.style.backgroundColor = options.bgcolor;
             }
@@ -45,9 +41,11 @@ URL: github.com/ossreleasefeed/arewethereyet
             }
 
             if (percentageComplete < 100) {
+                this.progress.setAttribute('aria-valuenow', percentageComplete);
                 this.progress.style.width = percentageComplete + '%';
             } else {
-                this.progress.style.width = percentageComplete + '%';
+                this.progress.setAttribute('aria-valuenow', '100');
+                this.progress.style.width = '100%';
                 window.setTimeout(function() {
                     awty.progress.style.width = 0;
                     awty.progress.style.height = 0;
@@ -64,7 +62,12 @@ URL: github.com/ossreleasefeed/arewethereyet
             // Only create a new element if progress does not already exist.
             if (!this.progress) {
                 this.progress = document.createElement('div');
-                this.progress.setAttribute('class', 'progress');
+                this.progress.setAttribute('class', 'awty-progress');
+                // Add ARIA for accessibility.
+                this.progress.setAttribute('role', 'progressbar');
+                this.progress.setAttribute('aria-valuemin', '0');
+                this.progress.setAttribute('aria-valuemax', '100');
+                this.progress.setAttribute('aria-valuenow', '0');
 
                 if (options) {
                     this.setOptions(options);

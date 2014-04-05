@@ -1,28 +1,150 @@
+* {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 body {
+    background-color: #e0e0e0;
+    color: #333;
     margin: 0;
     padding: 0;
+    font: 16px/1.4 Helvetica;
 }
-.top,
-.bottom {
-    height: 350px;
+header {
+    margin: 0 auto;
+    padding-top: 2%;
+    width: 40em;
+}
+h1,
+h2 {
+    margin: 0;
+}
+h1 {
+    font: 6rem/.7 'Vollkorn', Helvetica;
+    font-weight: bold;
+    text-shadow: 2px 2px 1px white;
+    letter-spacing: -4px;
+}
+h2 {
+    font: 4rem/.7 'Vollkorn', Helvetica;
+    font-weight: bold;
+}
+header p {
+    margin: 0;
+}
+button {
+    background: -moz-linear-gradient(to top, rgba(191, 191, 191, 1), rgba(255, 255, 255, 1));
+    background: linear-gradient(to top, rgba(191, 191, 191, 1), rgba(255, 255, 255, 1));
+    color: black;
+    margin: 1rem 2%;
+    border: 0;
+    border-radius: 6px;
+    width: 5rem;
+    height: 2rem;
+    font-size: .8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:active {
+    background: -moz-linear-gradient(to bottom, rgba(191, 191, 191, 1), rgba(255, 255, 255, 1));
+    background: linear-gradient(to bottom, rgba(191, 191, 191, 1), rgba(255, 255, 255, 1));
+}
+pre {
+    background-color: #e0e0e0;
+    color: #333;
+    margin: 0;
+    padding: 0 1rem;
+    border: 2px solid white;
+    line-height: 100%
+}
+code {
+    font-size: .8rem;
 }
 .top {
-    background-color: #e0e0e0;
+    height: 150px;
 }
-.bottom {
-    background-color: #333;
+.demo,
+.how {
     position: relative;
+    background-color: #333;
+    color: white;
+    margin: 0 auto 3rem;
+    padding: 3rem 2rem 2rem;
+    border: 10px solid #fff;
+    width: 80%;
+    height: auto;
 }
-.buttons {
-    margin: 2rem;
+.demo h2,
+.how h2 {
+    position: absolute;
+    top: 3px;
+    left: -3px;
+}
+.demo h2 {
+    color: #fff;
+}
+.demo p {
+    padding: 0 5% 0 3%;
+}
+.buttons-container {
+    position: absolute;
+    bottom: -2.4rem;
+    left: 28%;
+    min-width: 40rem;
+    z-index:99999;
+}
+.github-ribbon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 0;
 }
 /* This is all you need */
-.progress {
+.awty-progress {
     position: absolute;
+    top: 0;
+    left: 0;
     background-color: #333;
     width: 0;
     height: 5px;
     z-index: 9999;
     transition: width 1s ease,
                 height .2s ease;
+}
+
+@media screen and (max-width: 60em) {
+    header {
+        padding-top: 4%;
+        width: 32em;
+    }
+    h1 {
+        font-size: 4.5rem;
+    }
+    .optional {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 44em) {
+    .top {
+        height: 6rem;
+    }
+    header {
+        padding-top: 1.8rem;
+        width: 19em;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    .buttons-container {
+        min-width: 15rem;
+    }
+    .small {
+        display: none;
+    }
+    .github-ribbon {
+        display: none;
+    }
 }

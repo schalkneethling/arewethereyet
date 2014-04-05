@@ -2,20 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AWTY - Are We There Yet</title>
+    <title>Simple, Zero-Dependency Progress Meter - Are We There Yet</title>
     <link rel="stylesheet" type="text/css" href="css/awty.css" media="screen" />
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Vollkorn:700' />
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" type="text/css" href="css/awty-ie.css" media="screen" />
+    <![endif]-->
+
+    <script src="js/lib/html5shiv.js"></script>
 </head>
 <body>
-    <div class="top"></div>
-    <div class="bottom"></div>
+    <main>
+        <section class="top">
+            <header>
+                <h1>arewethereyet</h1>
+                <p>simple, zero-dependency progress meter</p>
+            </header>
+        </section>
+        <section class="demo">
+            <h2>What?</h2>
+            <p><abbr title="are we there yet">AWTY</abbr> is a simple, small (~716 bytes minified), Youtube style, progress element you can
+                quickly and easily add to your own projects.</p>
+            <p>There are zero dependencies, just add the JS, a little bit (~10 lines) off CSS, and you are good to go.
+                Click the buttons to see it in action.</p>
+            <p>Tested to work on IE8+ and the rest of the world.</p>
+            <div class="buttons-container">
+                <button class="small" data-progress="20">20%</button>
+                <button class="optional small" data-progress="40">40%</button>
+                <button data-progress="60">60%</button>
+                <button class="optional small" data-progress="80">80%</button>
+                <button data-progress="100">100%</button>
+            </div>
+        </section>
+        <section class="how">
+            <h2>How?</h2>
+            <p>Add the needed JS file and CSS snippet and then intialize it like this:</p>
+<pre>
+<code>
+var options = {
+    selector: '.top',
+    bgcolor: red
+};
+awty.add(options);
+</code>
+</pre>
+            <p>Now everytime your task progresses, simply call the update function, incrementing the value.</p>
+<pre>
+<code>
+awty.update(percentage);
+</code>
+</pre>
+        </section>
+    </main>
 
-    <div class="buttons">
-        <button data-progress="20">20%</button>
-        <button data-progress="40">40%</button>
-        <button data-progress="60">60%</button>
-        <button data-progress="80">80%</button>
-        <button data-progress="100">100%</button>
-    </div>
+    <a href="https://github.com/ossreleasefeed/arewethereyet">
+        <img class="github-ribbon" src="https://camo.githubusercontent.com/567c3a48d796e2fc06ea80409cc9dd82bf714434/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png">
+    </a>
 
     <script src="js/awty.js"></script>
     <script src="js/site.js"></script>
