@@ -9,6 +9,10 @@ body {
     padding: 0;
     font: 16px/1.4 Helvetica;
 }
+main {
+    margin: 0 auto;
+    min-width: 30em;
+}
 header {
     margin: 0 auto;
     padding-top: 2%;
@@ -19,32 +23,34 @@ h2 {
     margin: 0;
 }
 h1 {
-    font: 6rem/.7 'Vollkorn', Helvetica;
+    font: 6em/.7 'Vollkorn', Helvetica;
     font-weight: bold;
     text-shadow: 2px 2px 1px white;
     letter-spacing: -4px;
 }
 h2 {
-    font: 4rem/.7 'Vollkorn', Helvetica;
+    font: 4em/.7 'Vollkorn', Helvetica;
     font-weight: bold;
 }
 header p {
     margin: 0;
 }
 button {
+    background-color: #bfbfbf;
     background: -moz-linear-gradient(to top, rgba(191, 191, 191, 1), rgba(255, 255, 255, 1));
     background: linear-gradient(to top, rgba(191, 191, 191, 1), rgba(255, 255, 255, 1));
     color: black;
-    margin: 1rem 2%;
+    margin: 0 0 0 5%;
     border: 0;
     border-radius: 6px;
-    width: 5rem;
-    height: 2rem;
-    font-size: .8rem;
+    width: 6em;
+    height: 3em;
+    font-size: 0.9em;
     font-weight: bold;
     cursor: pointer;
 }
 button:active {
+    background-color: white;
     background: -moz-linear-gradient(to bottom, rgba(191, 191, 191, 1), rgba(255, 255, 255, 1));
     background: linear-gradient(to bottom, rgba(191, 191, 191, 1), rgba(255, 255, 255, 1));
 }
@@ -52,23 +58,23 @@ pre {
     background-color: #e0e0e0;
     color: #333;
     margin: 0;
-    padding: 0 1rem;
+    padding: 0 1em;
     border: 2px solid white;
     line-height: 100%
 }
 code {
-    font-size: .8rem;
+    font-size: .8em;
 }
 .top {
-    height: 150px;
+    height: 15em;
 }
 .demo,
 .how {
     position: relative;
     background-color: #333;
     color: white;
-    margin: 0 auto 3rem;
-    padding: 3rem 2rem 2rem;
+    margin: 0 auto 3em;
+    padding: 3em 2em 2em;
     border: 10px solid #fff;
     width: 80%;
     height: auto;
@@ -86,11 +92,11 @@ code {
     padding: 0 5% 0 3%;
 }
 .buttons-container {
-    position: absolute;
-    bottom: -2.4rem;
-    left: 28%;
-    min-width: 40rem;
-    z-index:99999;
+    background-color: #333;
+    margin: 1em auto;
+    padding: 1em 0;
+    border-radius: 36px;
+    width: 40em;
 }
 .github-ribbon {
     position: absolute;
@@ -111,13 +117,20 @@ code {
                 height .2s ease;
 }
 
-@media screen and (max-width: 60em) {
+@media screen and (max-width: 62em) {
+    main {
+        min-width: 15em;
+    }
     header {
         padding-top: 4%;
         width: 32em;
     }
+    .buttons-container {
+        padding: 1em 0 1em .5em;
+        width: 22em;
+    }
     h1 {
-        font-size: 4.5rem;
+        font-size: 4.5em;
     }
     .optional {
         display: none;
@@ -125,25 +138,30 @@ code {
 }
 
 @media screen and (max-width: 44em) {
-    .top {
-        height: 6rem;
+    main {
+        min-width: 10em;
     }
     header {
-        padding-top: 1.8rem;
+        padding-top: 1.8em;
         width: 19em;
     }
     h1 {
-        font-size: 3rem;
+        font-size: 3em;
     }
     h2 {
-        font-size: 2.5rem;
+        font-size: 2.5em;
+    }
+    .top {
+        height: 12em;
     }
     .buttons-container {
-        min-width: 15rem;
+        width: 15em;
     }
-    .small {
-        display: none;
+    .demo,
+    .how {
+        width: 90%;
     }
+    .small,
     .github-ribbon {
         display: none;
     }
